@@ -4,6 +4,7 @@
     "displayName": "BoozGame WebGL API Plugin",
     "description": "Plugin Unity pour intégrer l'API BoozGame dans vos jeux WebGL.",
     "unity": "2022.3",
+    "keywords": ["boozgame", "webgl", "client", "api"],
     "author": {
       "name": "Lionel Abrogoua",
       "email": "support@boozgame.com",
@@ -13,4 +14,3 @@
       "com.unity.textmeshpro": "3.0.6"
     }
   }
-  
