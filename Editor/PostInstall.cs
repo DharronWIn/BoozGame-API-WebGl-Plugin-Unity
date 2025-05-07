@@ -7,19 +7,15 @@ public static class BoozClientPostInstall
 {
     static BoozClientPostInstall()
     {
-        string packagePath = "Packages/com.boozgame.webglclient";
-        string targetPath = "Assets/BoozClient";
+        string sourcePath = Path.Combine("Packages", "com.boozgame.webglclient", "RunTime");
+        string targetPath = Path.Combine("Assets", "BoozClient");
 
         if (!Directory.Exists(targetPath))
         {
-            Debug.Log("[BoozClient] Installation détectée. Copie des fichiers dans Assets/BoozClient...");
-            FileUtil.CopyFileOrDirectory(packagePath, targetPath);
+            Debug.Log("[BoozClient] Copie initiale des fichiers dans Assets/BoozClient...");
+            FileUtil.CopyFileOrDirectory(sourcePath, targetPath);
             AssetDatabase.Refresh();
-            Debug.Log("[BoozClient] Fichiers copiés avec succès !");
-        }
-        else
-        {
-            Debug.Log("[BoozClient] Le dossier Assets/BoozClient existe déjà. Aucune action.");
+            Debug.Log("[BoozClient] Copie terminée avec succès.");
         }
     }
 }
